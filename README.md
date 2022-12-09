@@ -30,3 +30,17 @@ netedit map.net.xml
 - Load your route file (e.g map.rou.xml)
 
 - Save the demands **File** -> **Demands Elements** -> **Save Demands Elements**, then press Ctrl + T to run the simulation using sumo-gui
+
+- Adjust delay the simulation
+
+- Press Play button (the green button)
+
+- Save the simulation sumocfg **File** -> **Save Configuration** (Ctrl + Shift + S)
+
+```bash
+sumo -c map.sumocfg --fcd-output trace.xml
+```
+
+```bash
+/usr/share/sumo/tools/traceExporter.py --fcd-input trace.xml --ns2mobility --output ns2mobility.tcl
+```
