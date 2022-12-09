@@ -16,7 +16,7 @@ netconvert --osm-files map.osm -o map.net.xml
 - Generate the trips using `randomTrips.py` tools, please run following command.
 
 ```bash
-/usr/share/sumo/tools/randomTrips.py -n map.net.xml -r map.rou.xml -o map.trips.xml
+/usr/share/sumo/tools/randomTrips.py -n map.net.xml -r map.rou.xml -o map.trips.xml -e 600 -p 0.5
 ```
 
 - From your terminal, run
