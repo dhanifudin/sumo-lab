@@ -4,7 +4,7 @@
 
 - Open [OpenStreetMap Export](https://www.openstreetmap.org/export)
 
-- ![OpenStreetMap](./images/openstreetmap.png)
+ ![OpenStreetMap](./images/openstreetmap.png)
 
 - Download then save into your directory
 - Open the terminal and run the following command to convert openstreetmap into netedit format
@@ -29,4 +29,4 @@ netedit map.net.xml
 
 - Load your route file (e.g map.rou.xml)
 
-- Save the demands, then press Ctrl + T to run the simulation using sumo-gui
+- Save the demands **File** -> **Demands Elements** -> **Save Demands Elements**, then press Ctrl + T to run the simulation using sumo-gui
