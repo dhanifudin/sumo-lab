@@ -42,5 +42,5 @@ sumo -c map.sumocfg --fcd-output trace.xml
 ```
 
 ```bash
-/usr/share/sumo/tools/traceExporter.py --fcd-input trace.xml --ns2mobility --output ns2mobility.tcl
+/usr/share/sumo/tools/traceExporter.py --fcd-input trace.xml --ns2mobility-output ns2mobility.tcl
 ```
