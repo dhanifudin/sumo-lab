@@ -37,10 +37,22 @@ netedit map.net.xml
 
 - Save the simulation sumocfg **File** -> **Save Configuration** (Ctrl + Shift + S)
 
+- Generate trace file using following command
+
 ```bash
 sumo -c map.sumocfg --fcd-output trace.xml
 ```
 
+- Generate mobility output as tcl file format using following command
+
 ```bash
 /usr/share/sumo/tools/traceExporter.py --fcd-input trace.xml --ns2mobility-output ns2mobility.tcl
+```
+
+- Put the `ns2mobility.tcl` into your home of ns3
+- Copy the `sources/aodv/examples/aodv.cc` into `<ns3-home>/src/aodv/examples/aodv.cc`
+- Run the ns3 simulation by using following command
+
+```bash
+./waf --run aodv --vis
 ```
