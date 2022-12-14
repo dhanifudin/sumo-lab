@@ -4,7 +4,7 @@
 
 ### Debian/Ubuntu
 
-There are available sumo package from official ubuntu repository
+There are available sumo packages from the official ubuntu repository
 
 ```bash
 sudo apt install sumo sumo-tools
@@ -23,7 +23,7 @@ sudo apt install sumo sumo-tools
 netconvert --osm-files map.osm -o map.net.xml
 ```
 
-- Generate the trips using `randomTrips.py` tools, please run following command.
+- Generate the trips using `randomTrips.py` tools, please run the following command.
 
 ```bash
 /usr/share/sumo/tools/randomTrips.py -n map.net.xml -r map.rou.xml -o map.trips.xml -e 600 -p 0.5
@@ -41,19 +41,19 @@ netedit map.net.xml
 
 - Save the demands **File** -> **Demands Elements** -> **Save Demands Elements**, then press Ctrl + T to run the simulation using sumo-gui
 
-- Adjust delay the simulation
+- Adjust the delay in the simulation
 
-- Press Play button (the green button)
+- Press the Play button (the green button)
 
 - Save the simulation sumocfg **File** -> **Save Configuration** (Ctrl + Shift + S)
 
-- Generate trace file using following command
+- Generate trace file using the following command
 
 ```bash
 sumo -c map.sumocfg --fcd-output trace.xml
 ```
 
-- Generate mobility output as tcl file format using following command
+- Generate mobility output as tcl file format using the following command
 
 ```bash
 /usr/share/sumo/tools/traceExporter.py --fcd-input trace.xml --ns2mobility-output ns2mobility.tcl
@@ -61,7 +61,7 @@ sumo -c map.sumocfg --fcd-output trace.xml
 
 - Put the `ns2mobility.tcl` into your home of ns3
 - Copy the `sources/aodv/examples/aodv.cc` into `<ns3-home>/src/aodv/examples/aodv.cc`
-- Run the ns3 simulation by using following command
+- Run the ns3 simulation by using the following command
 
 ```bash
 ./waf --run aodv --vis
