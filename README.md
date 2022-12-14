@@ -1,5 +1,15 @@
 # Sumo Lab
 
+## Installation
+
+### Debian/Ubuntu
+
+There are available sumo package from official ubuntu repository
+
+```bash
+sudo apt install sumo sumo-tools
+```
+
 ## Simulation using openstreetmap
 
 - Open [OpenStreetMap Export](https://www.openstreetmap.org/export)
