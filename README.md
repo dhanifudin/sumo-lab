@@ -49,7 +49,7 @@ netedit map.net.xml
 
 - Save the simulation sumocfg **File** -> **Save Configuration** (Ctrl + Shift + S)
 
-## Generate sumocfg using XML config directly
+## Generate sumocfg using XML config directly (Alternate way)
 
 - Create config below
 
