@@ -51,7 +51,7 @@ netedit map.net.xml
 
 ## Generate sumocfg using XML config directly (Alternate way)
 
-- Create config below
+- Create config below then save into `map.sumocfg`
 
 ```xml
 <configuration>
