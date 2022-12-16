@@ -26,8 +26,10 @@ netconvert --osm-files map.osm -o map.net.xml
 - Generate the trips using `randomTrips.py` tools, please run the following command.
 
 ```bash
-/usr/share/sumo/tools/randomTrips.py -n map.net.xml -r map.rou.xml -o map.trips.xml -e 600 -p 0.5
+/usr/share/sumo/tools/randomTrips.py -n map.net.xml -r map.rou.xml -o map.trips.xml -e 100 -p 0.5
 ```
+
+## Generate sumocfg using GUI
 
 - From your terminal, run
 
@@ -47,6 +49,21 @@ netedit map.net.xml
 
 - Save the simulation sumocfg **File** -> **Save Configuration** (Ctrl + Shift + S)
 
+## Generate sumocfg using XML config directly
+
+- Create config below
+
+```xml
+<configuration>
+  <input>
+    <net-file value="map.net.xml"/>
+    <route-files value="map.rou.xml"/>
+  </input>
+</configuration>
+```
+
+## Generate trace file and tcl
+
 - Generate trace file using the following command
 
 ```bash
@@ -59,10 +76,14 @@ sumo -c map.sumocfg --fcd-output trace.xml
 /usr/share/sumo/tools/traceExporter.py --fcd-input trace.xml --ns2mobility-output ns2mobility.tcl
 ```
 
-- Put the `ns2mobility.tcl` into your home of ns3
-- Copy the `sources/aodv/examples/aodv.cc` into `<ns3-home>/src/aodv/examples/aodv.cc`
-- Run the ns3 simulation by using the following command
+## Integrate into NS3
+
+- Copy all code from the `src/scratch/sumo` into your `<ns3-home>/scratch/sumo`
+
+- Put the `ns2mobility.tcl` into your `<ns3-home>/scratch/sumo`
+
+- Run the ns3 simulation using the following command
 
 ```bash
-./waf --run aodv --vis
+./waf --run scratch/sumo/sumo --vis
 ```
