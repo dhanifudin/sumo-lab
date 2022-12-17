@@ -118,13 +118,13 @@ private:
 };
 
 RoutingExperiment::RoutingExperiment ()
-  : utility(traceFile),
+  : utility (traceFile),
     port (9),
     bytesTotal (0),
     packetsReceived (0),
     m_CSVfileName ("manet-routing.output.csv"),
     m_traceMobility (false),
-    m_protocol (3) // AODV
+    m_protocol (2) // AODV
 {
 }
 
